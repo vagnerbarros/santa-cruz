@@ -8,7 +8,7 @@ class Constants {
 	public static $_DEBUG = true;
 	
 	//DOMAIN
-	public static $_DOMAIN = "http://localhost/ticafe";
+	public static $_DOMAIN = "http://localhost/santa_cruz";
 	
 	//DATABASE PARAMETERS
 	
@@ -21,31 +21,18 @@ class Constants {
 	//	public static $_PASS = "sillabus4cafeh"; //sillabus4cafeh
 	//	public static $_BASE = "sillabus_4"; 
 	
-		public static $_USER = "ti_cafe";
-		public static $_PASS = "ti_cafe"; 
-		public static $_BASE = "ti_cafe";
+		public static $_USER = "you_soft";
+		public static $_PASS = "you_soft"; 
+		public static $_BASE = "you_soft";
 	
 		//ATIVO
-		public static $_ATIVO = 'S';
-		public static $_INATIVO = 'N';
+		public static $_ATIVO = 'ATIVO';
+		public static $_INATIVO = 'INATIVO';
 		
 		//Sim, Nao
 		public static $_SIM = 'S';
 		public static $_NAO = 'N';
 		
-		//QUANTIDADE INICIAL DE CREDITOS
-		public static $_CREDITOS_INICIAL = 0;
-		
-		//TIPO DE OPERAÇÃO
-		public static $_CREDITO = 'CREDITO';
-		public static $_DEBITO = 'DEBITO';
-		
-		//DESCRIÇÃO DA OPERAÇÃO
-		public static $_ESCOLHA_CURSO = 'ESCOLHA DE CURSO';
-		public static $_DESISTENCIA = 'DESISTENCIA DE TURMA';
-		public static $_COMPRA = 'COMPRA DE CREDITOS';
-		public static $_CANCELAMENTO = 'CURSO OU TURMA CANCELADO';
-	
 		//NAMESPACES
 		//public static $_NAMESPACE = "EEPE_TST_";//FREEMYSQL TESTE
 		public static $_NAMESPACE = "";
@@ -54,22 +41,14 @@ class Constants {
 		public static $_MSG_SUCESSO = 1;
 		public static $_MSG_ERRO = 0;
 	
-	//FILESYSTEM PARAMETERS
-	
-		//DEVELOP
-		public static $_FOTODIR = "C:/wamp/www/ticafe/files/pics/";
-		public static $_FILEDIR = "C:/wamp/www/ticafe/files/";
-		
-		//DEPLOY
-		//public static $_FILEDIR = "../ticafe/";
 		
 	//SYSTEM PROPERTIES (DO NOT CHANGE ON DEPLOY)
 	public static $_DEFAULT_PAGE = "HomePage";
 		
 	public static $_SYSNAME = "ticafe";
 	public static $_SYSMAIL = "cesarfranca@gmail.com";
-	public static $_SYSLABEL = "Ti Cafe";
-	public static $_SITENAME = "Ti Cafe";
+	public static $_SYSLABEL = "Click Vest";
+	public static $_SITENAME = "Click Vest";
 	
 	//BODY MESSAGE
 	public static $_MSG_SUCCESS = "alert-success";

@@ -9,7 +9,7 @@ abstract class RepositorioEntidade implements IRepositorio{
 	
 	public function returnByMax($field){
 		
-		$query = "SELECT * FROM ".Constants::$_BASE.".".Constants::$_NAMESPACE.$this->nm_entidade." WHERE ativo = '".Constants::$_ATIVO."' ORDER BY $field DESC LIMIT 0,1 ";
+		$query = "SELECT * FROM ".Constants::$_BASE.".".Constants::$_NAMESPACE.$this->nm_entidade." WHERE status = '".Constants::$_ATIVO."' ORDER BY $field DESC LIMIT 0,1 ";
 		$result = ConexaoBD::prepare($query);
 		$result->execute();
 		$this->reportErrors($result);
@@ -18,7 +18,7 @@ abstract class RepositorioEntidade implements IRepositorio{
 	}
 	
 	public function returnMax($field){
-		$result = ConexaoBD::prepare("SELECT max($field) FROM ".Constants::$_BASE.".".Constants::$_NAMESPACE.$this->nm_entidade." WHERE ativo = '".Constants::$_ATIVO."'");
+		$result = ConexaoBD::prepare("SELECT max($field) FROM ".Constants::$_BASE.".".Constants::$_NAMESPACE.$this->nm_entidade." WHERE status = '".Constants::$_ATIVO."'");
 		$result->execute();
 		$this->reportErrors($result);
 		if($item = $result->fetch()) {
@@ -68,7 +68,7 @@ abstract class RepositorioEntidade implements IRepositorio{
 	public function retrieve($entidade){
 		$entidade = $entidade->toArray();
 		$fields = array_keys($entidade); 
-		$query = "SELECT * FROM ".Constants::$_BASE.".".Constants::$_NAMESPACE.$this->nm_entidade." WHERE id=:id AND ativo = '".Constants::$_ATIVO."' LIMIT 0,1";
+		$query = "SELECT * FROM ".Constants::$_BASE.".".Constants::$_NAMESPACE.$this->nm_entidade." WHERE id=:id AND status = '".Constants::$_ATIVO."' LIMIT 0,1";
 		$result = ConexaoBD::prepare($query);
 		$result->bindValue(":id", $entidade['id']);
 		$resultset = $result->execute();
@@ -85,7 +85,7 @@ abstract class RepositorioEntidade implements IRepositorio{
 			$query .= $sep . $field . "=:" . $field;  	
 			$sep = " AND ";
 		}
-		$query.=" AND ativo = '".Constants::$_ATIVO."' ";
+		$query.=" AND status = '".Constants::$_ATIVO."' ";
 		$result = ConexaoBD::prepare($query);
 		foreach ($fields as $field){
 			$result->bindValue(":".$field, $keys[$field]);
@@ -111,7 +111,7 @@ abstract class RepositorioEntidade implements IRepositorio{
 			$query .= $sep . $field . "=:" . $field;  	
 			$sep = " AND ";
 		}
-		$query .=" AND ativo = '".Constants::$_ATIVO."' ";
+		$query .=" AND status = '".Constants::$_ATIVO."' ";
 		$result = ConexaoBD::prepare($query);
 		foreach ($fields as $field){
 			$result->bindValue(":".$field, $keys[$field]);
@@ -135,7 +135,7 @@ abstract class RepositorioEntidade implements IRepositorio{
 			} 
 		}
 		
-		$query .= " WHERE id = :id  AND ativo = '".Constants::$_ATIVO."' ";
+		$query .= " WHERE id = :id  AND status = '".Constants::$_ATIVO."' ";
 		$result = ConexaoBD::prepare($query);
 		foreach($fields as $field){
 			$result->bindValue(":".$field, $entidade[$field]);
@@ -149,7 +149,7 @@ abstract class RepositorioEntidade implements IRepositorio{
 	public function delete($entidade){
 		$entidade = $entidade->toArray();
 		$fields = array_keys($entidade); 
-		$query = "UPDATE ".Constants::$_BASE.".".Constants::$_NAMESPACE.$this->nm_entidade." SET ativo = '".Constants::$_INATIVO."'
+		$query = "UPDATE ".Constants::$_BASE.".".Constants::$_NAMESPACE.$this->nm_entidade." SET status = '".Constants::$_INATIVO."'
 		 WHERE id =:id";
 		$result = ConexaoBD::prepare($query);
 		$result->bindParam(":id", $entidade['id'], PDO::PARAM_INT);
