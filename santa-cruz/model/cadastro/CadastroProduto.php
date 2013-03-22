@@ -11,4 +11,14 @@ class CadastroProduto extends CadastroEntidade {
 	public function cadastrar($produto){
 		$this->repositorio->create($produto);
 	}
+	
+	public function inativar($id){
+		$produto = $this->buscarPorId($id);
+		$produto->setStatus(Constants::$_INATIVO);
+		$this->repositorio->update($produto);
+	}
+	
+	public function atualizar($produto){
+		$this->repositorio->update($produto);
+	}
 }

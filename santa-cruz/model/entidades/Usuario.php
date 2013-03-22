@@ -6,15 +6,17 @@ class Usuario implements Entidade {
 	public static $NM_ENTITY = "usuario";
 	
 	private $id;
+	private $perfil;
 	private $nome;
 	private $login;
 	private $senha;
 	private $status;
 	
 	//construtor
-	public function Usuario($id, $nome, $login, $senha, $status){
+	public function Usuario($id, $perfil, $nome, $login, $senha, $status){
 		
 		$this->setId($id);
+		$this->setIdPerfil($perfil);
 		$this->setNome($nome);
 		$this->setLogin($login);
 		$this->setSenha($senha);
@@ -51,6 +53,7 @@ class Usuario implements Entidade {
 		$hash = array();
 		
 		$hash['id'] = $this->getId();
+		$hash['perfil'] = $this->getPerfil();
 		$hash['nome'] = $this->getNome();
 		$hash['login'] = $this->getLogin();
 		$hash['senha'] = $this->getSenha();
@@ -64,13 +67,16 @@ class Usuario implements Entidade {
 	 */
 	public static function fromArray($hash){
 		
-		return new Usuario($hash['id'], $hash['nome'], $hash['login'], $hash['senha'], $hash['status']);
+		return new Usuario($hash['id'], $hash['perfil'], $hash['nome'], $hash['login'], $hash['senha'], $hash['status']);
 	}
 	
 	//metodos get
 	
 	public function getId(){
 		return $this->id;
+	}
+	public function getPerfil(){
+		return $this->perfil;
 	}
 	public function getNome(){
 		return $this->nome;
@@ -89,6 +95,9 @@ class Usuario implements Entidade {
 	
 	public function setId($id){
 		$this->id = $id;
+	}
+	public function setPerfil($perfil){
+		$this->perfil = $perfil;
 	}
 	public function setNome($nome){
 		$this->nome = $nome;

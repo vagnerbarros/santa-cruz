@@ -3,7 +3,7 @@
 // require_once("model/exception/CaptchaIncorretoException.php");
   
  //DOMINIOS
- 
+require_once("model/dominio/TipoPerfil.php"); 
  
  //ENTIDADES
 require_once("model/entidades/Usuario.php");
