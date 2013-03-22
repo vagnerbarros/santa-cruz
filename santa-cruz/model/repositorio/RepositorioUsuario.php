@@ -15,6 +15,8 @@ class RepositorioUsuario extends RepositorioEntidade {
 		return $result[0];
 	}
 	
+	public function selectBy
+	
 	public function mount($resultSet){
 		$objs = array();
 		while ($item = $resultSet->fetch()) {
