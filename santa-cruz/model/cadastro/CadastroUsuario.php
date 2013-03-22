@@ -37,6 +37,6 @@ class CadastroUsuario extends CadastroEntidade {
 	}
 	
 	private function listar($tipo_perfil){
-		return $this->repositorio->
+		//return $this->repositorio->
 	}
 }
