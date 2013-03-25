@@ -15,15 +15,15 @@ require_once('util/Proxy.php');
 Proxy::reset();
 
 //DOMINIOS
-include 'model/dominio/ContatoAssunto.php';
-include 'model/dominio/StatusMensagem.php';
+include 'model/dominio/TipoPerfil.php';
 
 //MODEL
 require_once("model/fachada/Fachada.php");
 
 
 //Registra as Pages
-//Imports::page("HomePage");	
+Imports::page("HomePage");
+Imports::page("CadastroTestePage");	
 
 //Registra as Actions
 //Imports::action("AtualizarCursoAction");

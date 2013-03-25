@@ -10,7 +10,7 @@
 		
 		<br/>
 		
-		<a href="http://www.yousoft.com.br" target="_new"> <img alt="" src="css/img/logoyou.png" height="35"> </a>	
+		<a href="http://www.yousoft.com.br" target="_new"> <img alt="" src="view/css/img/logoyou.png" height="35"> </a>	
 	
 	</div>
 	

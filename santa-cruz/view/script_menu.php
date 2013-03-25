@@ -1,6 +1,6 @@
  <!-- The JavaScript -->
-        <script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+        <script type="text/javascript" src="view/js/jquery.min.js"></script>
+		<script type="text/javascript" src="view/js/jquery.easing.1.3.js"></script>
 <script type="text/javascript">
             $(function() {
 				$('#menu li').bind('mouseenter',function(){

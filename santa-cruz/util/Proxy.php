@@ -359,8 +359,8 @@ class Proxy {
 	 * 
 	 */
 	public static function encrypt($str){
-		//return sha1($str);
-		return $str;
+		return sha1($str);
+		//return $str;
 	}
 }
 

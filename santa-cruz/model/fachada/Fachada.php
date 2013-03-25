@@ -2,20 +2,15 @@
  //EXCEPTIONS
 // require_once("model/exception/CaptchaIncorretoException.php");
   
- //DOMINIOS
-require_once("model/dominio/TipoPerfil.php"); 
- 
  //ENTIDADES
 require_once("model/entidades/Usuario.php");
 require_once("model/entidades/Reserva.php");
 require_once("model/entidades/ProdutoReservado.php");
 require_once("model/entidades/Produto.php");
-require_once("model/entidades/Perfil.php");
 
  //REPOSITORIOS
 require_once("model/repositorio/IRepositorio.php");
 require_once("model/repositorio/RepositorioEntidade.php");
-require_once("model/repositorio/RepositorioPerfil.php");
 require_once("model/repositorio/RepositorioProduto.php");
 require_once("model/repositorio/RepositorioProdutoReservado.php");
 require_once("model/repositorio/RepositorioReserva.php");
@@ -23,7 +18,6 @@ require_once("model/repositorio/RepositorioUsuario.php");
  
  //CADASTROS
 require_once("model/cadastro/CadastroEntidade.php");
-require_once("model/cadastro/CadastroPerfil.php");
 require_once("model/cadastro/CadastroProduto.php");
 require_once("model/cadastro/CadastroProdutoReservado.php");
 require_once("model/cadastro/CadastroReserva.php");
