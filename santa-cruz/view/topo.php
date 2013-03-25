@@ -2,10 +2,10 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link rel="stylesheet" href="css/style_topo.css" />
+<link rel="stylesheet" href="view/css/style_topo.css" />
 
 	<?php 
-		include 'script_menu.php';
+		include 'view/script_menu.php';
 	?>
 	
 	<script type="text/javascript">
@@ -48,14 +48,14 @@
 		<div class="bg_logo">
 			
 			<div class="logotipo">
-				<img alt="" src="css/img/logo.png" width="175"/>
+				<img alt="" src="view/css/img/logo.png" width="175"/>
 			</div>
 			
 			<form action="teste" class="form_busca" id="form_busca" name="form_busca">
 				
 				<input type="text" id="txt_busca" />
 				
-				<a onclick="javascript:submeter();"> <img alt="" src="css/img/search.png"/> </a>
+				<a onclick="javascript:submeter();"> <img alt="" src="view/css/img/search.png"/> </a>
 				
 			</form>
 			
@@ -68,7 +68,7 @@
 				
 				<li>|</li>
 				
-				<li><a href="">Roupas Masculinas <img alt="" src="css/img/seta_down.png" height="6"/> </a>
+				<li><a href="">Roupas Masculinas <img alt="" src="view/css/img/seta_down.png" height="6"/> </a>
 					<ul class="sub_menu">
 						<li><a href=""> &rsaquo; Social</a></li>
 						<li><a href=""> &rsaquo; Passeio Formal</a></li>
@@ -77,7 +77,7 @@
 				
 				<li>|</li>
 				
-				<li><a href="">Roupas Femininas <img alt="" src="css/img/seta_down.png" height="6"/> </a>
+				<li><a href="">Roupas Femininas <img alt="" src="view/css/img/seta_down.png" height="6"/> </a>
 					<ul class="sub_menu">
 						<li><a href=""> &rsaquo; Social</a></li>
 						<li><a href=""> &rsaquo; Passeio Formal</a></li>
